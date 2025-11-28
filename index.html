@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiez Name Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #kiez-name {
+            font-size: 2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="kiez-name"></div>
+
+    <script>
+        const prefixes = [
+            "Schläger", "Pitbull", "Fischkopf", "Blitz", "Sturm", "Eisen", "Wolf", "Bär", "Drache", "Tiger",
+            "Adler", "Falke", "Rabe", "Stahl", "Feuer", "Eis", "Donner", "Hagel", "Regen", "Wind",
+            "Sturmwind", "Hammer", "Faust", "Klinge", "Schwert", "Schild", "Panzer", "Stahlfaust", "Eisenfaust", "Blut",
+            "Knochen", "Schädel", "Totenkopf", "Rächer", "Zerstörer", "Vernichter", "Killer", "Jäger", "Fänger", "Hai",
+            "Wal", "Fisch", "Katze", "Hund", "Bulldogge", "Rottweiler", "Schäferhund", "Löwe", "Panther", "Leopard",
+            "Gepard", "Jaguar", "Puma", "Krokodil", "Schlange", "Skorpion", "Spinne", "Biene", "Wespe", "Hornisse",
+            "Adlerauge", "Falkenauge", "Rabenauge", "Wolfsauge", "Bärenklaue", "Tigerkralle", "Drachenzahn", "Stahlzahn", "Eisenklaue", "Blutklaue",
+            "Knochenbrecher", "Schädelspalter", "Totenkopfjäger", "Rächer des Kiez", "Zerstörer der Straßen", "Killer der Nacht", "Jäger der Schatten", "Fänger der Seelen", "Hai der Straße", "Wal der Gosse",
+            "Fisch der Tiefe", "Katze der Nacht", "Hund der Hölle", "Bulldogge des Blocks", "Rottweiler des Rings", "Schäferhund des Schattens", "Löwe des Lagers", "Panther des Parks", "Leopard der Läden", "Gepard der Gassen",
+            "Jaguar der Jäger", "Puma der Pisten", "Krokodil der Kanäle", "Schlange der Straßen", "Skorpion der Schatten", "Spinne der Spelunken", "Biene der Bars", "Wespe der Wege", "Hornisse der Höfe", "Adler des Asphalts"
+        ];
+        const suffixes = [
+            "Dieter", "Karl", "Horst", "Hans", "Fritz", "Otto", "Günther", "Heinz", "Klaus", "Werner",
+            "Gerhard", "Helmut", "Rolf", "Wolfgang", "Heinrich", "Friedrich", "Wilhelm", "Georg", "Ernst", "Alfred",
+            "Rudolf", "Walter", "Herbert", "Kurt", "Paul", "Max", "Emil", "Hugo", "Arthur", "Oskar",
+            "Ludwig", "Franz", "Josef", "Anton", "Bernhard", "Christian", "Daniel", "Eduard", "Felix", "Gustav",
+            "Hermann", "Jakob", "Johannes", "Konrad", "Leopold", "Moritz", "Nikolaus", "Oliver", "Philipp", "Richard",
+            "Siegfried", "Theodor", "Ulrich", "Viktor", "Xaver", "Yves", "Zacharias", "Andreas", "Bernd", "Christoph",
+            "Dirk", "Eberhard", "Ferdinand", "Gerd", "Hartmut", "Ingo", "Jürgen", "Karlheinz", "Lothar", "Manfred",
+            "Norbert", "Peter", "Rainer", "Sven", "Torsten", "Udo", "Volker", "Waldemar", "Yorick", "Zeno",
+            "Adalbert", "Baldur", "Caspar", "Dietrich", "Falk", "Ingmar", "Jochen", "Lorenz", "Nils", "Oswald",
+            "Pankraz", "Quentin", "Torben", "Ulf", "Veit", "Wenzel", "Zephyr", "Anselm", "Bertram", "Cornelius"
+        ];
+
+        function generateKiezName() {
+            const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+            const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
+            return prefix + "-" + suffix;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("kiez-name").textContent = generateKiezName();
+        });
+    </script>
+</body>
+</html>
